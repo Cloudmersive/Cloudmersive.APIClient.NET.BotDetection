@@ -2,9 +2,9 @@
 
 Remove-Item –path ./client –recurse
 
-Invoke-WebRequest -Uri 'https://api.cloudmersive.com/spam/v1/swagger.json' -OutFile '.\spam-api-swagger.json'
-(Get-Content .\spam-api-swagger.json).replace('localhost', "api.cloudmersive.com") | Set-Content .\spam-api-swagger.json
-(Get-Content .\spam-api-swagger.json).replace('"http"', '"https"') | Set-Content .\spam-api-swagger.json
+Invoke-WebRequest -Uri 'https://api.cloudmersive.com/bot/v1/swagger.json' -OutFile '.\bot-api-swagger.json'
+(Get-Content .\bot-api-swagger.json).replace('localhost', "api.cloudmersive.com") | Set-Content .\bot-api-swagger.json
+(Get-Content .\bot-api-swagger.json).replace('"http"', '"https"') | Set-Content .\bot-api-swagger.json
 
 java -jar ./openapi-generator-cli-7.12.0.jar generate -i spam-api-swagger.json -g csharp -o client -c packageconfig.json
 
