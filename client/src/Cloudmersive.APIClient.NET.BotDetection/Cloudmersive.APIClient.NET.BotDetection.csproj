@@ -12,10 +12,10 @@
     <Description>Cloudmersive Bot Detection Detection allows you to scan requests for bots.</Description>
     <Copyright>Copyright © 2026 Cloudmersive, LLC.</Copyright>
     <RootNamespace>Cloudmersive.APIClient.NET.BotDetection</RootNamespace>
-    <Version>5.0.0</Version>
+    <Version>5.0.1</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Cloudmersive.APIClient.NET.BotDetection.xml</DocumentationFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.Spam.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl><PackageProjectUrl>https://cloudmersive.com/security-threat-detection-api</PackageProjectUrl><PackageIconUrl>https://cloudmersive.com/images/cmsdk.png</PackageIconUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Change to HttpClient core</PackageReleaseNotes>
     <PackageTags>ai spam detection cloudmersive</PackageTags>

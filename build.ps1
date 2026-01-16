@@ -21,7 +21,7 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.BotDetection.sln
 
 
 
-(Get-Content $csprojpath).replace('<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl>', '<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl><PackageProjectUrl>https://cloudmersive.com/spam-detection-api</PackageProjectUrl><PackageIconUrl>https://cloudmersive.com/images/cmsdk.png</PackageIconUrl>') | Set-Content $csprojpath
+(Get-Content $csprojpath).replace('<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.Spam.git</RepositoryUrl>', '<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl><PackageProjectUrl>https://cloudmersive.com/security-threat-detection-api</PackageProjectUrl><PackageIconUrl>https://cloudmersive.com/images/cmsdk.png</PackageIconUrl>') | Set-Content $csprojpath
 
 
 
