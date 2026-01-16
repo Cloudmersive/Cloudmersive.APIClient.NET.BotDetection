@@ -1,0 +1,126 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "botapi",
+    "description": "Easily and directly detect and block bot activity.",
+    "version": "v1"
+  },
+  "host": "api.cloudmersive.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/bot/captcha/image/generate": {
+      "post": {
+        "tags": [
+          "Captcha"
+        ],
+        "summary": "Create an image CAPTCHA",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Characters",
+            "description": "Number of characters to request that the user enter; must be 2 or more",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImageCaptchaGenerateResult"
+            }
+          }
+        }
+      }
+    },
+    "/bot/captcha/image/validate": {
+      "post": {
+        "tags": [
+          "Captcha"
+        ],
+        "summary": "Validate a CAPTCHA response from the user",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "CaptchaID",
+            "description": "The ID of the CAPTCHA (this is returned from the CAPTCHA generate API)",
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "ChallengeResponse",
+            "description": "The challenge response input text received from the user to validate if they are a person or bot",
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "UserTimeoutMilliseconds",
+            "description": "The amount of time in milliseconds to allow the user to respond; if the response occurs more than this amount of time, in milliseconds, after the CAPTCHA was created, the answer will be considered invalid even if it is correct",
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImageCaptchaValidateResult"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ImageCaptchaGenerateResult": {
+      "type": "object",
+      "properties": {
+        "successful": {
+          "type": "boolean"
+        },
+        "captchaID": {
+          "type": "string"
+        },
+        "imageCaptchaPng": {
+          "format": "byte",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ImageCaptchaValidateResult": {
+      "type": "object",
+      "properties": {
+        "cleanResult": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "securityDefinitions": {
+    "Apikey": {
+      "type": "apiKey",
+      "name": "Apikey",
+      "in": "header",
+      "description": "Apikey"
+    }
+  },
+  "security": [
+    {
+      "Apikey": [ ]
+    }
+  ]
+}
