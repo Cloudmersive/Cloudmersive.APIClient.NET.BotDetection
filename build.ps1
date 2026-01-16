@@ -13,15 +13,15 @@ java -jar ./openapi-generator-cli-7.12.0.jar generate -i spam-api-swagger.json -
 ## & npm build ./client
 
 
-$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Spam/Cloudmersive.APIClient.NET.Spam.csproj
-$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.Spam.Test/Cloudmersive.APIClient.NET.Spam.Test.csproj
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.BotDetection/Cloudmersive.APIClient.NET.BotDetection.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.BotDetection.Test/Cloudmersive.APIClient.NET.BotDetection.Test.csproj
 #$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.VirusScan/Cloudmersive.APIClient.NET.VirusScan.nuspec
-$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.Spam.sln
+$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.BotDetection.sln
 
 
 
 
-(Get-Content $csprojpath).replace('<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.Spam.git</RepositoryUrl>', '<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.Spam.git</RepositoryUrl><PackageProjectUrl>https://cloudmersive.com/spam-detection-api</PackageProjectUrl><PackageIconUrl>https://cloudmersive.com/images/cmsdk.png</PackageIconUrl>') | Set-Content $csprojpath
+(Get-Content $csprojpath).replace('<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl>', '<RepositoryUrl>https://github.com/Cloudmersive/Cloudmersive.APIClient.NET.BotDetection.git</RepositoryUrl><PackageProjectUrl>https://cloudmersive.com/spam-detection-api</PackageProjectUrl><PackageIconUrl>https://cloudmersive.com/images/cmsdk.png</PackageIconUrl>') | Set-Content $csprojpath
 
 
 
@@ -40,8 +40,8 @@ dotnet build $slnpath -c $configuration
 
 
 
-#& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.APIClient.NET.Spam/bin/Debug/netstandard2.0/Cloudmersive.APIClient.NET.Spam.dll
-#& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.APIClient.NET.Spam/bin/Release/netstandard2.0/Cloudmersive.APIClient.NET.Spam.dll
+#& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.APIClient.NET.BotDetection/bin/Debug/netstandard2.0/Cloudmersive.APIClient.NET.BotDetection.dll
+#& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.APIClient.NET.BotDetection/bin/Release/netstandard2.0/Cloudmersive.APIClient.NET.BotDetection.dll
 
 Write-Host "Packing..."
 
