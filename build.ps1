@@ -6,7 +6,7 @@ Invoke-WebRequest -Uri 'https://api.cloudmersive.com/bot/v1/swagger.json' -OutFi
 (Get-Content .\bot-api-swagger.json).replace('localhost', "api.cloudmersive.com") | Set-Content .\bot-api-swagger.json
 (Get-Content .\bot-api-swagger.json).replace('"http"', '"https"') | Set-Content .\bot-api-swagger.json
 
-java -jar ./openapi-generator-cli-7.12.0.jar generate -i spam-api-swagger.json -g csharp -o client -c packageconfig.json
+java -jar ./openapi-generator-cli-7.12.0.jar generate -i bot-api-swagger.json -g csharp -o client -c packageconfig.json
 
 ## (Get-Content ./client/src/api/ConvertDocumentApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertDocumentApi.js
 ## (Get-Content ./client/src/api/ConvertWebApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertWebApi.js
