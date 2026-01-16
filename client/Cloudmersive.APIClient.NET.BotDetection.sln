@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmersive.APIClient.NET.BotDetection", "src\Cloudmersive.APIClient.NET.BotDetection\Cloudmersive.APIClient.NET.BotDetection.csproj", "f658b31a-d65c-485d-b8de-e5132ca813bf"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cloudmersive.APIClient.NET.BotDetection.Test", "src\Cloudmersive.APIClient.NET.BotDetection.Test\Cloudmersive.APIClient.NET.BotDetection.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		f658b31a-d65c-485d-b8de-e5132ca813bf.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		f658b31a-d65c-485d-b8de-e5132ca813bf.Debug|Any CPU.Build.0 = Debug|Any CPU
+		f658b31a-d65c-485d-b8de-e5132ca813bf.Release|Any CPU.ActiveCfg = Release|Any CPU
+		f658b31a-d65c-485d-b8de-e5132ca813bf.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
